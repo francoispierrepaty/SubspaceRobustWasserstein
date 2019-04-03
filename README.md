@@ -1,4 +1,4 @@
-# SubspaceRobustWasserstein
+# Subspace Robust Wasserstein
 
 This repository contains Python code for computing the Subspace Robust Wasserstein Distances defined in
 

@@ -55,7 +55,8 @@ class ProjectedGradientAscent(Algorithm):
                 eigenvalues = sp.linalg.eigh(V, eigvals=(d-k,d-1), eigvals_only=True)
             
             sum_eigenvalues = np.sum(eigenvalues)
-            gap = sum_eigenvalues - OT_val
+            max_maxmin_values = max(maxmin_values)
+            gap = np.abs(sum_eigenvalues - max_maxmin_values)/max_maxmin_values
             minmax_values.append(sum_eigenvalues)
         
         return Omega, pi, maxmin_values, minmax_values
